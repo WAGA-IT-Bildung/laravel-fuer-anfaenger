@@ -2,132 +2,77 @@
 
 Ein Schritt-für-Schritt-Lernprojekt von **WAGA IT Bildung**.
 
-Dieses Repository begleitet den Einstieg in Laravel von der Installation bis zu einer kleinen vollständigen Webanwendung.
-
-Die Lernreihe ist bewusst in einzelne Teile gegliedert. Jeder Teil baut auf dem vorherigen auf und bekommt später einen eigenen nachvollziehbaren GitHub-Stand.
-
----
-
-## Lernreihe
-
-- **Teil 1 – Einstieg, Installation und Projektstart**
-- Teil 2 – Routes und Views
-- Teil 3 – Blade Layouts
-- Teil 4 – Controller
-- Teil 5 – Datenbank und Migrationen
-- Teil 6 – Models und Eloquent
-- Teil 7 – CRUD
-- Teil 8 – Formulare und Validierung
-
----
-
-## Aktueller Stand
-
-Wir befinden uns aktuell bei:
-
-**Teil 1 – Einstieg, Installation und Projektstart**
-
-Die ausführliche Anleitung findest du hier:
-
-- [Teil 1 – Einstieg und Installation](docs/teil-01-einstieg-installation.md)
-- [Teil 1 – Projektstruktur](docs/teil-01-projektstruktur.md)
-- [Teil 1 – Wichtige Befehle](docs/teil-01-befehle.md)
+Dieses Repository zeigt den Einstieg in **Laravel** – von der Installation bis zur Entwicklung einer kleinen Webanwendung mit **Routes, Views, Layouts, Controllern, Datenbank und CRUD**.
 
 ---
 
 ## Was ist Laravel?
 
-Laravel ist ein modernes PHP-Framework zur Entwicklung von Webanwendungen.
+**Laravel** ist ein modernes **PHP-Framework** zur Entwicklung von Webanwendungen.
 
-Laravel unterstützt unter anderem:
+Ein Framework ist vereinfacht gesagt ein fertiges Grundgerüst, das viele typische Aufgaben bereits vorbereitet.
 
-- Routing
-- Views und Templates
-- Datenbankzugriffe
-- Formulare
-- Validierung
-- Authentifizierung
-- APIs
-- Tests
-- strukturierte Webanwendungen nach dem MVC-Prinzip
+Mit Laravel kann man zum Beispiel bauen:
 
----
-
-## Was ist Composer?
-
-Composer ist der Paketmanager für PHP.
-
-Ein einfacher Vergleich:
-
-| React / JavaScript | Laravel / PHP |
-|---|---|
-| npm | Composer |
-| package.json | composer.json |
-| package-lock.json | composer.lock |
-| node_modules | vendor |
-
-Composer lädt Laravel und alle benötigten PHP-Pakete herunter.
+- klassische Webseiten
+- Admin-Bereiche
+- Blogs
+- Kurs- oder Schulverwaltungssysteme
+- Buchungs- und Formularsysteme
+- APIs für React, Vue oder mobile Apps
+- Login- und Benutzerverwaltung
+- datenbankgestützte Webanwendungen
 
 ---
 
-## Voraussetzungen
+## Warum benutzt man Laravel?
 
-Für dieses Lernprojekt werden verwendet:
+Ohne Framework müsste man viele Dinge jedes Mal selbst programmieren:
 
-- PHP
-- Composer
-- Git
-- Laravel
-- Visual Studio Code
+- URL-Verarbeitung
+- Datenbankverbindung
+- Seitenausgabe
+- Validierung von Formularen
+- Fehlerbehandlung
+- Sicherheit
+- Benutzerverwaltung
+- Projektstruktur
 
-Versionen prüfen:
+Laravel bringt dafür bereits viele Werkzeuge mit.
 
-```powershell
-php -v
-composer --version
-git --version
-```
+### Vorteile von Laravel
 
----
-
-## Projekt starten
-
-Im Projektordner:
-
-```powershell
-php artisan serve
-```
-
-Danach im Browser öffnen:
-
-```text
-http://127.0.0.1:8000
-```
+- klare Struktur
+- moderne Syntax
+- gute Lesbarkeit
+- viele eingebaute Funktionen
+- gut für kleine und größere Projekte
+- sehr beliebt in der PHP-Welt
+- gut geeignet zum Lernen moderner Webentwicklung
 
 ---
 
-## Wichtiger Hinweis für GitHub
+## Wofür wird Laravel benutzt?
 
-Wer Laravel selbst mit Composer neu installiert, erhält die originale Laravel-Grundinstallation.
+Laravel wird verwendet, wenn man eine **serverseitige Webanwendung mit PHP** entwickeln möchte.
 
-Wer dieses Repository klont, erhält dagegen den jeweils gespeicherten Stand unseres Lernprojekts.
+Typische Einsatzbereiche:
 
-Später werden die einzelnen Lernstände zusätzlich über Git-Branches oder Tags nachvollziehbar gemacht.
-
-Beispiele:
-
-```text
-teil-01-einstieg
-teil-02-routes-views
-teil-03-blade-layouts
-teil-04-controller
-```
+- Unternehmenswebseiten mit Formularlogik
+- Verwaltungssysteme
+- Schulungs- oder Kursplattformen
+- CRM-ähnliche Systeme
+- kleine bis mittlere Web-Apps
+- REST-APIs
+- Backend für Frontend-Projekte
 
 ---
 
-## Ziel des Projekts
+## Wie arbeitet Laravel grundsätzlich?
 
-Am Ende soll nachvollziehbar sein, wie die wichtigsten Laravel-Bausteine zusammenspielen:
+Laravel-Anwendungen bestehen oft aus mehreren Bausteinen.
+
+### Sehr grob vereinfacht:
 
 ```text
 Browser
@@ -136,12 +81,11 @@ Route
    ↓
 Controller
    ↓
-Model
-   ↓
-Datenbank
+Model / Datenbank
    ↓
 View
-```
+   ↓
+HTML-Ausgabe im Browser
 
 ---
 
