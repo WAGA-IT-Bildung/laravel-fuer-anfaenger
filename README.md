@@ -20,7 +20,7 @@
 
 PHP ist die Programmiersprache.
 
-Laravel stellt darauf aufbauend eine fertige Struktur und viele Werkzeuge bereit, damit wir nicht bei jeder Webanwendung alles von Grund auf selbst programmieren müssen.
+Laravel stellt darauf aufbauend eine feste Struktur und viele fertige Werkzeuge bereit, damit wir nicht bei jeder Webanwendung alles von Grund auf neu programmieren müssen.
 
 Ganz vereinfacht:
 
@@ -62,13 +62,279 @@ Zum Beispiel:
 - Buchungssysteme
 - Online-Shops
 - Formulare
-- Benutzer- und Login-Systeme
+- Login- und Benutzerverwaltung
 - REST-APIs
 - Dashboards
 - interne Verwaltungsprogramme
 - Backend-Systeme für React, Vue oder mobile Apps
 
-Laravel wird besonders interessant, sobald eine Webseite nicht mehr nur aus statischem HTML besteht, sondern **Logik, Daten und Datenbankzugriffe** benötigt.
+Laravel wird besonders interessant, sobald eine Webseite nicht mehr nur aus statischem HTML besteht, sondern **Logik, Daten, Formulare oder Datenbankzugriffe** benötigt.
+
+---
+
+# 📚 Kursübersicht
+
+Die Lernreihe ist bewusst in einzelne Teile gegliedert.
+
+Jeder Teil baut auf dem vorherigen auf.
+
+So kann man jederzeit nachvollziehen:
+
+- was bereits gelernt wurde
+- welche Dateien neu hinzugekommen sind
+- welche Dateien verändert wurden
+- wie sich die Anwendung Schritt für Schritt entwickelt
+
+---
+
+## ✅ Teil 1 – Einstieg, Installation und Projektstart
+
+In Teil 1 lernen wir die Grundlagen kennen.
+
+### Themen
+
+- Was ist Laravel?
+- Was ist PHP?
+- Was ist Composer?
+- Voraussetzungen prüfen
+- Laravel installieren
+- Projekt in Visual Studio Code öffnen
+- lokalen Entwicklungsserver starten
+- Laravel-Projektstruktur verstehen
+- erste Artisan-Befehle
+- Git-Grundstand erstellen
+
+### Dokumentation
+
+👉 [Teil 1 – Einstieg & Installation](docs/teil-01-einstieg-installation.md)
+
+👉 [Teil 1 – Projektstruktur](docs/teil-01-projektstruktur.md)
+
+👉 [Teil 1 – Wichtige Befehle](docs/teil-01-befehle.md)
+
+### Git-Stand
+
+```text
+teil-01
+```
+
+---
+
+## 🟠 Teil 2 – Routes und Views
+
+In Teil 2 verlassen wir die Laravel-Standardseite und erstellen unsere ersten eigenen Seiten.
+
+### Themen
+
+- `routes/web.php`
+- `Route::get()`
+- Startseite `/`
+- Test-Route `/hallo`
+- Blade-Views
+- `welcome.blade.php`
+- `ueber-uns.blade.php`
+- mehrere Seiten miteinander verbinden
+
+### Geplante Dokumentation
+
+```text
+docs/teil-02-routes-views.md
+docs/teil-02-befehle.md
+```
+
+### Geplanter Git-Stand
+
+```text
+teil-02
+```
+
+---
+
+## 🔜 Teil 3 – Blade Layouts
+
+In Teil 3 räumen wir unseren bisherigen HTML-Code auf.
+
+### Themen
+
+- gemeinsames Layout
+- `layouts/app.blade.php`
+- `@extends`
+- `@section`
+- `@yield`
+- gemeinsame Navigation
+- gemeinsamer Footer
+- weniger doppelter HTML-Code
+
+---
+
+## 🔜 Teil 4 – Controller
+
+Wir verschieben Programmlogik aus den Routes in eigene Controller.
+
+```text
+Route
+   ↓
+Controller
+   ↓
+View
+```
+
+---
+
+## 🔜 Teil 5 – Datenbank und Migrationen
+
+Geplant:
+
+- Datenbankverbindung
+- SQLite
+- MySQL / MariaDB
+- Migrationen
+- Tabellen erstellen
+- Datenbankstruktur versionieren
+
+---
+
+## 🔜 Teil 6 – Models und Eloquent
+
+Geplant:
+
+- Models
+- Eloquent ORM
+- Datensätze lesen
+- Datensätze speichern
+- Beziehungen zwischen Tabellen
+
+---
+
+## 🔜 Teil 7 – CRUD
+
+CRUD bedeutet:
+
+```text
+Create
+Read
+Update
+Delete
+```
+
+Wir lernen:
+
+- Datensätze anlegen
+- Datensätze anzeigen
+- Datensätze bearbeiten
+- Datensätze löschen
+
+---
+
+## 🔜 Teil 8 – Formulare und Validierung
+
+Geplant:
+
+- Formulare
+- POST-Requests
+- CSRF-Schutz
+- Validierung
+- Fehlermeldungen
+- alte Eingabewerte wieder anzeigen
+
+---
+
+## 🏗️ Unser Lernweg
+
+```mermaid
+flowchart TD
+    A[Teil 1<br>Installation & Projektstruktur]
+    B[Teil 2<br>Routes & Views]
+    C[Teil 3<br>Blade Layouts]
+    D[Teil 4<br>Controller]
+    E[Teil 5<br>Datenbank & Migrationen]
+    F[Teil 6<br>Models & Eloquent]
+    G[Teil 7<br>CRUD]
+    H[Teil 8<br>Formulare & Validierung]
+    I[Vollständige kleine Webanwendung]
+
+    A --> B --> C --> D --> E --> F --> G --> H --> I
+```
+
+---
+
+## 🧠 Was lernen wir mit Laravel?
+
+Wir beginnen bewusst einfach.
+
+Aus der Laravel-Standardinstallation entsteht Schritt für Schritt eine eigene Webanwendung.
+
+```text
+Laravel installieren
+        ↓
+Projektstruktur verstehen
+        ↓
+Routes
+        ↓
+Blade Views
+        ↓
+Blade Layouts
+        ↓
+Controller
+        ↓
+Datenbank
+        ↓
+Migrationen
+        ↓
+Models
+        ↓
+Eloquent ORM
+        ↓
+Formulare
+        ↓
+Validierung
+        ↓
+CRUD
+        ↓
+vollständige Webanwendung
+```
+
+Das Ziel ist nicht:
+
+> „Ein paar Laravel-Befehle auswendig lernen.“
+
+Sondern zu verstehen, **wie eine moderne PHP-Webanwendung aufgebaut ist und wie die einzelnen Bestandteile zusammenspielen**.
+
+---
+
+## 🏗️ Was bauen wir in diesem Kurs?
+
+Unser Lernprojekt entwickelt sich Schritt für Schritt weiter.
+
+Am Anfang lernen wir nur die Laravel-Struktur kennen.
+
+Danach kommen eigene Seiten, Routen, Controller und später eine Datenbank hinzu.
+
+Geplant sind unter anderem:
+
+```text
+✅ Laravel installieren
+✅ Projekt starten
+✅ Projektstruktur kennenlernen
+✅ Composer verstehen
+✅ Artisan kennenlernen
+🟠 Routes verstehen
+🟠 Blade Views verwenden
+🔜 Blade Layouts
+🔜 Controller
+🔜 Datenbank
+🔜 Migrationen
+🔜 Models
+🔜 Eloquent
+🔜 Formulare
+🔜 Validierung
+🔜 Datensätze anzeigen
+🔜 Datensätze hinzufügen
+🔜 Datensätze bearbeiten
+🔜 Datensätze löschen
+```
+
+Später entsteht daraus eine kleine **WAGA IT Verwaltungsanwendung**.
 
 ---
 
@@ -106,109 +372,29 @@ Laravel hilft uns dabei, eine Anwendung **übersichtlich, wartbar und strukturie
 
 ---
 
-## 🧠 Was lernen wir mit Laravel?
-
-Wir beginnen bewusst mit den Grundlagen.
-
-Aus der Laravel-Standardinstallation entsteht Schritt für Schritt eine eigene kleine Webanwendung.
-
-```text
-Laravel installieren
-        ↓
-Projektstruktur verstehen
-        ↓
-Routes
-        ↓
-Blade Views
-        ↓
-Blade Layouts
-        ↓
-Controller
-        ↓
-Datenbank
-        ↓
-Migrationen
-        ↓
-Models
-        ↓
-Eloquent ORM
-        ↓
-Formulare
-        ↓
-Validierung
-        ↓
-CRUD
-        ↓
-vollständige Webanwendung
-```
-
-Das Ziel ist also nicht:
-
-> „Ein paar Laravel-Befehle auswendig lernen.“
-
-Sondern zu verstehen, **wie eine moderne PHP-Webanwendung aufgebaut ist und wie die einzelnen Bestandteile zusammenspielen**.
-
----
-
-## 🏗️ Was bauen wir in diesem Kurs?
-
-Unser Lernprojekt entwickelt sich Schritt für Schritt weiter.
-
-Am Anfang lernen wir nur die Laravel-Struktur kennen.
-
-Danach kommen eigene Seiten, Routen, Controller und später eine Datenbank hinzu.
-
-Geplant sind unter anderem:
-
-```text
-✅ Laravel installieren
-✅ Projekt starten
-✅ Projektstruktur kennenlernen
-✅ Routes verstehen
-✅ Blade Views verwenden
-🔜 Blade Layouts
-🔜 Controller
-🔜 Datenbank
-🔜 Migrationen
-🔜 Models
-🔜 Eloquent
-🔜 Formulare
-🔜 Validierung
-🔜 Datensätze anzeigen
-🔜 Datensätze hinzufügen
-🔜 Datensätze bearbeiten
-🔜 Datensätze löschen
-```
-
-Später entsteht daraus eine kleine **WAGA IT Verwaltungsanwendung**.
-
----
-
 ## 🧩 Die wichtigsten Laravel-Bausteine
 
 Laravel besteht aus mehreren Bereichen, die zusammenarbeiten.
 
-```text
-Browser
-   ↓
-Route
-   ↓
-Controller
-   ↓
-Model
-   ↓
-Datenbank
-   ↓
-Controller
-   ↓
-View
-   ↓
-Browser
+```mermaid
+flowchart LR
+    A[Browser]
+    B[Route]
+    C[Controller]
+    D[Model]
+    E[(Datenbank)]
+    F[View / Blade]
+    G[Browser]
+
+    A --> B --> C --> D --> E
+    E --> D --> C --> F --> G
 ```
 
-### Route
+---
 
-Eine **Route** entscheidet, was bei einer bestimmten URL passiert.
+### 🛣️ Route
+
+Eine **Route** entscheidet, was bei einer bestimmten URL passieren soll.
 
 Beispiel:
 
@@ -216,11 +402,25 @@ Beispiel:
 http://127.0.0.1:8000/ueber-uns
 ```
 
-Laravel schaut in unsere Routen und entscheidet, welche Aktion ausgeführt werden soll.
+Laravel schaut in:
+
+```text
+routes/web.php
+```
+
+und prüft, welche Aktion für diese URL ausgeführt werden soll.
+
+Beispiel:
+
+```php
+Route::get('/ueber-uns', function () {
+    return view('ueber-uns');
+});
+```
 
 ---
 
-### Controller
+### 🎮 Controller
 
 Ein **Controller** enthält später einen großen Teil unserer Programmlogik.
 
@@ -233,9 +433,11 @@ Eingaben prüfen
 Daten an eine View übergeben
 ```
 
+Controller lernen wir bewusst erst später kennen.
+
 ---
 
-### Model
+### 📦 Model
 
 Ein **Model** repräsentiert Daten unserer Anwendung.
 
@@ -252,7 +454,7 @@ Laravel verwendet dafür unter anderem **Eloquent ORM**.
 
 ---
 
-### View
+### 🖥️ View
 
 Eine **View** ist für die Darstellung zuständig.
 
@@ -301,7 +503,7 @@ Ein stark vereinfachtes Beispiel:
 6. Browser zeigt die fertige Seite
 ```
 
-Später kommt noch der Controller dazwischen:
+Später kommt der Controller dazwischen:
 
 ```text
 Browser
@@ -453,7 +655,7 @@ Laravel und React erfüllen unterschiedliche Aufgaben.
 | läuft hauptsächlich auf dem Server | läuft hauptsächlich im Browser |
 | Backend und Webanwendungslogik | Benutzeroberfläche / Frontend |
 | Datenbankzugriffe | interaktive Oberfläche |
-| Routing auf dem Server | Komponenten im Frontend |
+| serverseitiges Routing | Komponenten im Frontend |
 | APIs erstellen | APIs verwenden |
 
 Vereinfacht:
@@ -468,24 +670,15 @@ React
 
 Beide können später sogar zusammenarbeiten:
 
-```text
-┌─────────────────────┐
-│        React        │
-│      Frontend       │
-└──────────┬──────────┘
-           │
-           │ HTTP / REST API
-           ▼
-┌─────────────────────┐
-│       Laravel       │
-│       Backend       │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│        MySQL        │
-│      Datenbank      │
-└─────────────────────┘
+```mermaid
+flowchart TD
+    A[React<br>Frontend]
+    B[HTTP / REST API]
+    C[Laravel<br>Backend]
+    D[(MySQL / MariaDB)]
+
+    A --> B --> C --> D
+    D --> C --> B --> A
 ```
 
 So sehen wir später auch, wie sich unser React-Lernprojekt und Laravel ergänzen können.
@@ -525,7 +718,8 @@ Für dieses Lernprojekt verwenden wir unter anderem:
 
 Später können zusätzlich hinzukommen:
 
-- MySQL / MariaDB
+- MySQL
+- MariaDB
 - REST API
 - React
 
@@ -643,15 +837,6 @@ laravel-fuer-anfaenger/
 └── README.md
 ```
 
-Für den Anfang sind besonders wichtig:
-
-```text
-routes/
-resources/views/
-app/
-database/
-```
-
 ---
 
 ## 📂 Wichtige Ordner
@@ -698,7 +883,7 @@ app/Models/
 Hier finden wir unter anderem:
 
 ```text
-Migrations
+Migrationen
 Seeder
 Factories
 SQLite-Datenbank
@@ -719,160 +904,6 @@ node_modules/
 bei React beziehungsweise JavaScript.
 
 Den Inhalt von `vendor/` bearbeiten wir nicht von Hand.
-
----
-
-## 📚 Kursübersicht
-
-### ✅ Teil 1 – Einstieg, Installation und Projektstart
-
-In Teil 1 lernen wir:
-
-- Was ist Laravel?
-- Was ist PHP?
-- Was ist Composer?
-- Voraussetzungen prüfen
-- Laravel installieren
-- Projekt in VS Code öffnen
-- lokalen Server starten
-- Laravel-Projektstruktur verstehen
-- erste Artisan-Befehle
-
-Dokumentation:
-
-👉 [Teil 1 – Einstieg & Installation](docs/teil-01-einstieg-installation.md)
-
-👉 [Teil 1 – Projektstruktur](docs/teil-01-projektstruktur.md)
-
-👉 [Teil 1 – Wichtige Befehle](docs/teil-01-befehle.md)
-
-Git-Stand:
-
-```text
-teil-01
-```
-
----
-
-### 🟠 Teil 2 – Routes und Views
-
-In Teil 2 verlassen wir die Laravel-Standardseite und erstellen unsere ersten eigenen Seiten.
-
-Wir lernen:
-
-- `routes/web.php`
-- `Route::get()`
-- Startseite `/`
-- Test-Route `/hallo`
-- Blade-Views
-- `welcome.blade.php`
-- `ueber-uns.blade.php`
-- mehrere Seiten miteinander verbinden
-
-Dokumentation:
-
-👉 [Teil 2 – Routes und Views](docs/teil-02-routes-views.md)
-
-👉 [Teil 2 – Wichtige Befehle](docs/teil-02-befehle.md)
-
-Aktuelle URLs:
-
-```text
-/
- /ueber-uns
- /hallo
-```
-
----
-
-### 🔜 Teil 3 – Blade Layouts
-
-In Teil 3 räumen wir unseren bisherigen HTML-Code auf.
-
-Geplant:
-
-- gemeinsames Layout
-- `layouts/app.blade.php`
-- `@extends`
-- `@section`
-- `@yield`
-- gemeinsame Navigation
-- gemeinsamer Footer
-- weniger doppelter HTML-Code
-
----
-
-### 🔜 Teil 4 – Controller
-
-Geplant:
-
-```text
-Route
-   ↓
-Controller
-   ↓
-View
-```
-
-Wir verschieben Programmlogik aus den Routen in eigene Controller.
-
----
-
-### 🔜 Teil 5 – Datenbank und Migrationen
-
-Geplant:
-
-- Datenbankverbindung
-- SQLite / MySQL
-- Migrationen
-- Tabellen erstellen
-- Datenbankstruktur versionieren
-
----
-
-### 🔜 Teil 6 – Models und Eloquent
-
-Geplant:
-
-- Models
-- Eloquent ORM
-- Datensätze lesen
-- Beziehungen zwischen Tabellen
-
----
-
-### 🔜 Teil 7 – CRUD
-
-CRUD bedeutet:
-
-```text
-Create
-Read
-Update
-Delete
-```
-
-Wir lernen also:
-
-```text
-Datensatz anlegen
-Datensatz anzeigen
-Datensatz bearbeiten
-Datensatz löschen
-```
-
----
-
-### 🔜 Teil 8 – Formulare und Validierung
-
-Geplant:
-
-- Formulare
-- POST-Requests
-- CSRF-Schutz
-- Validierung
-- Fehlermeldungen
-- alte Eingabewerte wieder anzeigen
 
 ---
 
@@ -904,52 +935,18 @@ git checkout main
 
 ---
 
-## 🧪 Aktueller Stand des Projekts
+## 🧪 Aktueller Projektstand
 
-Aktuell bearbeiten wir:
+Aktuell abgeschlossen:
+
+```text
+Teil 1 – Einstieg, Installation und Projektstruktur
+```
+
+Aktuell in Arbeit:
 
 ```text
 Teil 2 – Routes und Views
-```
-
-Unsere Anwendung besitzt aktuell folgende Seiten beziehungsweise Routen:
-
-| URL | Bedeutung |
-|---|---|
-| `/` | Startseite |
-| `/ueber-uns` | Über dieses Lernprojekt |
-| `/hallo` | einfache Laravel-Testausgabe |
-
----
-
-## 🔄 Wie entwickelt sich unser Projekt?
-
-```text
-Teil 1
-Laravel-Grundinstallation
-        ↓
-Teil 2
-Routes + Views
-        ↓
-Teil 3
-Blade Layouts
-        ↓
-Teil 4
-Controller
-        ↓
-Teil 5
-Datenbank
-        ↓
-Teil 6
-Models + Eloquent
-        ↓
-Teil 7
-CRUD
-        ↓
-Teil 8
-Formulare + Validierung
-        ↓
-vollständige kleine Webanwendung
 ```
 
 ---
